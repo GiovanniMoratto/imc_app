@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfHeight: UITextField!
     @IBOutlet weak var lbResult: UILabel!
     @IBOutlet weak var ivResult: UIImageView!
+    @IBOutlet weak var viResult: UIView!
+    
+    var imc = 0.0
     
     // MARK: - Methods
     
@@ -24,6 +27,41 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculate(_ sender: Any) {
+        guard let textWeigth = tfWeight.text else { return }
+        guard let weight = Double(textWeigth) else { return }
+        
+        guard let textHeigth = tfHeight.text else { return }
+        guard let height = Double(textHeigth) else { return }
+        
+        imc = weight / pow(height, 2)
+        
+        showResults()
+    }
+    
+    func showResults() {
+        var result = String()
+        var image = String()
+        
+        switch imc {
+            case 0..<16:
+                result = "Magreza"
+                image = "abaixo"
+            case 16..<18.5:
+                result = "Abaixo do peso"
+                image = "abaixo"
+            case 18.5..<25:
+                result = "Peso ideal"
+                image = "ideal"
+            case 25..<30:
+                result = "Sobrepeso"
+                image = "sobre"
+            default:
+                result = "Obesidade"
+                image = "obesidade"
+        }
+        lbResult.text = result
+        ivResult.image = UIImage(named: image)
+        viResult.isHidden = false
     }
 
 
