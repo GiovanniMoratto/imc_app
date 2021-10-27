@@ -39,6 +39,9 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 75" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Pp-ZY-qJv">
                                 <rect key="frame" x="62.5" y="147" width="110" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="qQS-RH-4Cb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
@@ -115,6 +118,7 @@
                             <constraint firstItem="6dY-LR-BGW" firstAttribute="top" secondItem="8Pp-ZY-qJv" secondAttribute="bottom" constant="14" id="HBO-hk-S2u"/>
                             <constraint firstItem="8Pp-ZY-qJv" firstAttribute="centerX" secondItem="JDV-x8-JhA" secondAttribute="centerX" id="MXA-iS-rG4"/>
                             <constraint firstItem="hud-Pv-9Bu" firstAttribute="top" secondItem="8Pp-ZY-qJv" secondAttribute="top" id="PgQ-Fs-X00"/>
+                            <constraint firstItem="hud-Pv-9Bu" firstAttribute="height" secondItem="8Pp-ZY-qJv" secondAttribute="height" id="aCX-2F-TKh"/>
                             <constraint firstItem="JDV-x8-JhA" firstAttribute="top" secondItem="TsE-T3-jmM" secondAttribute="bottom" constant="20" id="biP-J3-Q4H"/>
                             <constraint firstItem="6dY-LR-BGW" firstAttribute="leading" secondItem="8Pp-ZY-qJv" secondAttribute="leading" id="d80-NS-LjZ"/>
                             <constraint firstItem="SGh-Rg-L7o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eNd-RW-Bxw"/>
